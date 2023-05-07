@@ -1,0 +1,29 @@
+opam-version: "2.0"
+version: "dev"
+
+homepage: "https://github.com/libtx"
+dev-repo: "git+https://github.com/libtx/docker-ci.git"
+license: "GPL-3"
+maintainer: "noreply@example.com"
+synopsis: "Dummy package to cache coq binaries"
+description: """
+Nothing to see here
+"""
+
+build: [
+  [true]
+]
+install: [true]
+depends: [
+  "coq" {(>= "8.17" & < "8.18~") | (= "dev")}
+  "coq-record-update" {(>= "0.3" & < "0.4~")}
+  "coq-stdpp"
+  "coq-equations"
+  "coq-hammer"
+]
+
+tags: [
+]
+authors: [
+  "k32"
+]
